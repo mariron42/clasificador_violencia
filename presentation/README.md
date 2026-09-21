@@ -7,4 +7,6 @@ English and Spanish editions share the same evidence and structure. Each deck co
 - [English poster](WomenHelp_poster_A0_en.pdf) and [Spanish poster](WomenHelp_poster_A0_es.pdf).
 - [Narrative and evidence decisions, Spanish](decision_narrativa_y_evidencia.md).
 
-A0 portrait is a proposed poster format, not a confirmed organizer requirement. Rehearse the talk to check timing. The annotation analysis is new work after paper submission. The comparisons retain their different evaluation protocols, and cross-institution generalization remains future work.
+The posters follow the [official SEPLN setup guide](https://sepln2026.org/guia-de-colocacion-de-posters/): A0 portrait, 841 × 1189 mm, with no mandatory template. See [printing and setup instructions](PRINT_AND_SETUP.md), including the English presentation edition and Spanish review edition. Numbered citations link to the public evidence and implementation, and a QR code opens the repository.
+
+Rehearse the talk to check timing. The annotation analysis is new work after paper submission. The comparisons retain their different evaluation protocols, and cross-institution generalization remains future work.
