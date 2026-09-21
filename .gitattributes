@@ -1,0 +1,3 @@
+# Preserve PDF byte offsets and Office packages on every platform.
+*.pdf binary
+*.pptx binary
