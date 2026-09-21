@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "womenhelp-classification"
+version = "0.2.0"
+description = "WomenHelp 2026: classical baselines, Spanish encoders, targeted augmentation and conservative severity routing"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+audit = ["pypdf"]
+classical = ["numpy", "scipy", "scikit-learn"]
+encoders = ["numpy", "scipy", "scikit-learn", "torch", "transformers", "datasets", "accelerate", "safetensors"]
+llm = ["numpy", "scikit-learn", "torch", "transformers", "datasets", "accelerate", "peft", "safetensors", "huggingface-hub"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

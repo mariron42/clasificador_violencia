@@ -1,0 +1,228 @@
+{
+  "source": "Organizer-provided starting kit; obtain separately with appropriate authorization.",
+  "source_sha256": "787b521e84b0ee10e80b697d6655353c4c64e7abf6ae82f1fbc114a8e2a500e5",
+  "splits": {
+    "train": {
+      "n": 4845,
+      "labels": [
+        {
+          "column": "L0",
+          "label": "Economic",
+          "vote_counts_0_1_2_3": [
+            3546,
+            418,
+            409,
+            472
+          ],
+          "split_decisions": 827,
+          "split_pct": 17.069143446852426,
+          "mean_population_vote_variance": 0.03793142988189428,
+          "hard_soft_mismatches": 9
+        },
+        {
+          "column": "L1",
+          "label": "Physical",
+          "vote_counts_0_1_2_3": [
+            1969,
+            364,
+            582,
+            1930
+          ],
+          "split_decisions": 946,
+          "split_pct": 19.525283797729617,
+          "mean_population_vote_variance": 0.043389519550510264,
+          "hard_soft_mismatches": 14
+        },
+        {
+          "column": "L2",
+          "label": "Property-related",
+          "vote_counts_0_1_2_3": [
+            3189,
+            625,
+            509,
+            522
+          ],
+          "split_decisions": 1134,
+          "split_pct": 23.405572755417957,
+          "mean_population_vote_variance": 0.0520123839009288,
+          "hard_soft_mismatches": 10
+        },
+        {
+          "column": "L3",
+          "label": "Psychological",
+          "vote_counts_0_1_2_3": [
+            611,
+            412,
+            1135,
+            2687
+          ],
+          "split_decisions": 1547,
+          "split_pct": 31.92982456140351,
+          "mean_population_vote_variance": 0.07095516569200781,
+          "hard_soft_mismatches": 29
+        },
+        {
+          "column": "L4",
+          "label": "Sexual",
+          "vote_counts_0_1_2_3": [
+            4082,
+            135,
+            182,
+            446
+          ],
+          "split_decisions": 317,
+          "split_pct": 6.542827657378741,
+          "mean_population_vote_variance": 0.014539617016397203,
+          "hard_soft_mismatches": 4
+        },
+        {
+          "column": "L5",
+          "label": "Vicarious",
+          "vote_counts_0_1_2_3": [
+            3689,
+            630,
+            328,
+            198
+          ],
+          "split_decisions": 958,
+          "split_pct": 19.772961816305468,
+          "mean_population_vote_variance": 0.04393991514734549,
+          "hard_soft_mismatches": 7
+        },
+        {
+          "column": "L6",
+          "label": "N/A",
+          "vote_counts_0_1_2_3": [
+            4472,
+            208,
+            33,
+            132
+          ],
+          "split_decisions": 241,
+          "split_pct": 4.974200206398349,
+          "mean_population_vote_variance": 0.011053778236440775,
+          "hard_soft_mismatches": 2
+        }
+      ],
+      "any_split_six_types": 3566,
+      "any_split_six_types_pct": 73.6016511867905,
+      "hard_soft_mismatches": 75
+    },
+    "devel": {
+      "n": 1212,
+      "labels": [
+        {
+          "column": "L0",
+          "label": "Economic",
+          "vote_counts_0_1_2_3": [
+            880,
+            88,
+            108,
+            136
+          ],
+          "split_decisions": 196,
+          "split_pct": 16.17161716171617,
+          "mean_population_vote_variance": 0.03593692702603594,
+          "hard_soft_mismatches": 0
+        },
+        {
+          "column": "L1",
+          "label": "Physical",
+          "vote_counts_0_1_2_3": [
+            521,
+            79,
+            135,
+            477
+          ],
+          "split_decisions": 214,
+          "split_pct": 17.656765676567655,
+          "mean_population_vote_variance": 0.039237257059039236,
+          "hard_soft_mismatches": 4
+        },
+        {
+          "column": "L2",
+          "label": "Property-related",
+          "vote_counts_0_1_2_3": [
+            806,
+            159,
+            129,
+            118
+          ],
+          "split_decisions": 288,
+          "split_pct": 23.762376237623762,
+          "mean_population_vote_variance": 0.052805280528052806,
+          "hard_soft_mismatches": 2
+        },
+        {
+          "column": "L3",
+          "label": "Psychological",
+          "vote_counts_0_1_2_3": [
+            175,
+            118,
+            282,
+            637
+          ],
+          "split_decisions": 400,
+          "split_pct": 33.00330033003301,
+          "mean_population_vote_variance": 0.07334066740007335,
+          "hard_soft_mismatches": 12
+        },
+        {
+          "column": "L4",
+          "label": "Sexual",
+          "vote_counts_0_1_2_3": [
+            1015,
+            27,
+            51,
+            119
+          ],
+          "split_decisions": 78,
+          "split_pct": 6.435643564356436,
+          "mean_population_vote_variance": 0.014301430143014304,
+          "hard_soft_mismatches": 2
+        },
+        {
+          "column": "L5",
+          "label": "Vicarious",
+          "vote_counts_0_1_2_3": [
+            919,
+            178,
+            73,
+            42
+          ],
+          "split_decisions": 251,
+          "split_pct": 20.70957095709571,
+          "mean_population_vote_variance": 0.046021268793546025,
+          "hard_soft_mismatches": 4
+        },
+        {
+          "column": "L6",
+          "label": "N/A",
+          "vote_counts_0_1_2_3": [
+            1105,
+            65,
+            10,
+            32
+          ],
+          "split_decisions": 75,
+          "split_pct": 6.188118811881188,
+          "mean_population_vote_variance": 0.013751375137513752,
+          "hard_soft_mismatches": 0
+        }
+      ],
+      "any_split_six_types": 877,
+      "any_split_six_types_pct": 72.35973597359735,
+      "hard_soft_mismatches": 24
+    }
+  },
+  "s1_train": {
+    "n": 13630,
+    "counts": {
+      "0": 2956,
+      "1": 4738,
+      "2": 5320,
+      "3": 616
+    }
+  },
+  "method": "Per report/type p is the mean of three binary votes. Split vote iff 0 < p < 1. Within-item population variance = p(1-p), equal to 2/9 for split votes and 0 for unanimity. Not a variance between identified workers, uncertainty interval, or severity disagreement metric."
+}

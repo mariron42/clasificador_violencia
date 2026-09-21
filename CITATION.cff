@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated WomenHelp 2026 system-description paper."
+title: "WomenHelp 2026: violence report classification"
+type: software
+authors:
+  - family-names: "Herrera Rendón"
+    given-names: "Marcel"
+repository-code: "https://github.com/mariron42/clasificador_violencia"
+version: 0.2.0
+date-released: 2026-09-20
+abstract: "Classical baselines, Spanish Transformer encoders, targeted data augmentation and conservative severity routing."

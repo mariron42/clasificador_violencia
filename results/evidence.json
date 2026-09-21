@@ -1,0 +1,47 @@
+{
+  "provenance": "Archived project results, verified against camera-ready project snapshot dated 2026-06-22. No new training runs.",
+  "classical_vs_encoder": {
+    "s1_macro_f1": {
+      "early_classical": 0.4974,
+      "beto_focal": 0.5429,
+      "later_classical_ensembles": [
+        0.5047,
+        0.5215
+      ]
+    },
+    "s2_macro_f1": {
+      "character_svm": 0.7642,
+      "beto_fixed045": 0.819845
+    },
+    "s2_micro_f1": {
+      "character_svm": 0.8449,
+      "beto_fixed045": 0.868453
+    }
+  },
+  "augmentation": {
+    "train_before": 13630,
+    "severe_before": 616,
+    "added": 516,
+    "train_after": 14146,
+    "severe_after": 1132,
+    "development_n": 3405,
+    "baseline": {
+      "macro_f1": 0.548114,
+      "severe_f1": 0.417808,
+      "severe_recall": 0.396104
+    },
+    "augmented": {
+      "macro_f1": 0.555198,
+      "severe_f1": 0.43346,
+      "severe_recall": 0.37013
+    }
+  },
+  "official": {
+    "severity_macro_f1": 0.607976891066,
+    "types_micro_f1": 0.870164998648,
+    "types_macro_f1": 0.808022474168,
+    "anchor_severity_macro_f1": 0.6067770721254157,
+    "changed": 290,
+    "n": 4219
+  }
+}
