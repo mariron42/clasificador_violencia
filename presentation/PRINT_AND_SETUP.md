@@ -19,6 +19,6 @@ The guide places IberLEF posters on 22 September at Escuela de Ingenierías Fase
 
 ## Language and scope
 
-English is used for the presentation edition to match the preference described in the forwarded correspondence. The consulted poster guide does not state a language rule, and the forwarded message does not explicitly confirm the participant's interpretation about spoken Spanish and English support material. This document does not claim that interpretation is a verified conference-wide requirement.
+The WomenHelp organizer's September 19 email explicitly requires all slides to be in English and asks for submission by email no later than September 21. It does not specify the language of the spoken presentation. The consulted poster guide does not state a poster language rule; the English poster is the presentation edition and Spanish is retained for review.
 
 No model scores or experiment claims changed in this poster revision. Citations now point to the public implementation, aggregate results, augmentation code, final router and new annotation analysis. Original case data and private project records are not included.
