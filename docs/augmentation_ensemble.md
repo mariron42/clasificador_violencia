@@ -2,6 +2,8 @@
 
 Added on September 22, 2026 to support the presentation's question-and-answer slide. This comparison uses the original 3,405 S1 development reports, including 154 Severe reports. It is separate from the final official test result.
 
+The current presentation uses [the actual final-system development comparison](final_selection.md) as its main recall backup. The intermediate comparison below remains as historical evidence; it does not explain the final submission by itself.
+
 | Development system | Macro-F1 | Severe F1 | Severe recall |
 |---|---:|---:|---:|
 | Baseline BETO | 0.548114 | 0.417808 | 0.396104 |

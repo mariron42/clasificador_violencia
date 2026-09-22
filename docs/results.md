@@ -44,6 +44,8 @@ An intermediate development ensemble including augmented BETO reached 0.580536 m
 
 ## Official test
 
+See [final selection](final_selection.md) for the distinction between intermediate development candidates and the submitted router, including newly recomputed final-development recall and direct verification that the final test ZIP retains every anchor Severe prediction.
+
 | Measure | Previous anchor | Final |
 |---|---:|---:|
 | S1 macro-F1 | 0.6067770721254157 | 0.607976891066 |

@@ -1,6 +1,6 @@
 # Decisiones de exposición y revisión de evidencia
 
-Versión del 21 de septiembre de 2026. Charla ejecutiva de diez minutos, con español para revisión e inglés para exposición. Se conserva el requisito del correo de centrarse en implementación y evitar una introducción extensa del corpus. La guía oficial de colocación de SEPLN, consultada posteriormente, confirma A0 vertical de 84,1 × 118,9 cm y ausencia de plantilla obligatoria. Véase `PRINT_AND_SETUP.md`.
+Versión actualizada el 22 de septiembre de 2026. Charla ejecutiva de diez minutos, con español para revisión y material en inglés para exposición. Se conserva el requisito del correo de centrarse en implementación y evitar una introducción extensa del corpus. La guía oficial de colocación de SEPLN, consultada posteriormente, confirma A0 vertical de 84,1 × 118,9 cm y ausencia de plantilla obligatoria. Véase `PRINT_AND_SETUP.md`.
 
 ## Hilo principal
 
@@ -12,9 +12,9 @@ La exposición muestra cómo adaptar un clasificador al problema: comparar las t
 2. **Comparación.** Los pilotos generativos comparten 133 reportes y exactitud conjunta. La tabla clásicos/BETO usa desarrollo completo y distingue las métricas de S1 y S2. El 0.4974 es una referencia clásica temprana, no su mejor ensamble posterior. Las comparaciones evalúan recetas completas y no aíslan arquitectura ni presupuesto.
 3. **Salidas.** Código de la receta S1 con softmax, focal, distancia ordinal y cabeza auxiliar enmascarada. S2 final tiene seis sigmoid y deriva N/A. Esto corrige la descripción general de siete sigmoid que todavía aparece en el paper: el detalle de implementación se verifica en el código.
 4. **Aumentación.** La implementación compone plantillas de apertura, acciones, contexto y cierre. Algunas elecciones usan indicios del original. Conserva originales, hereda etiquetas y limita a dos variantes por origen. Añade 516 textos Severe, de 4.52% a 8.00%. No se describe como paráfrasis verificada ni como generación por LLM.
-5. **Efecto.** Macro-F1 y F1 Severe suben; recall Severe baja. La gráfica usa diferencias absolutas por cien, eje simétrico y cero explícito. Los valores originales acompañan el gráfico. Balance, estilo y pesos cambian conjuntamente, por lo que falta una ablación causal.
+5. **Efecto individual.** En la comparación de BETO antes y después de aumentación, macro-F1 y F1 Severe suben; recall Severe baja. La gráfica usa diferencias absolutas por cien, eje simétrico y cero explícito. Los valores originales acompañan el gráfico. Balance, estilo y pesos cambian conjuntamente, por lo que falta una ablación causal. Este intercambio no describe el resultado del router final.
 6. **Anotación.** Nuevo análisis de etiquetas suaves, posterior al paper. 877/1,212 reportes tienen algún tipo dividido. La varianza p(1-p) describe votos dentro de cada decisión. Sin identidades, votos S1 ni profesión confirmada no puede presentarse como variación entre trabajadores sociales identificados. Hay 24 discrepancias hard/soft en desarrollo, de causa desconocida.
-7. **Ancla.** El router modifica 290/4,219 decisiones, en tres transiciones permitidas. El 93.13% conserva el ancla. Se compara el resultado oficial anterior y final, sin confundirlo con el efecto de aumentación.
+7. **Ancla.** El router modifica 290/4,219 decisiones, en tres transiciones permitidas. El 93.13% conserva el ancla. Se compara el resultado oficial anterior y final, sin confundirlo con el efecto de aumentación. Las predicciones guardadas de desarrollo muestran recall Severe de 40.91% para el ancla y 43.51% para el router: conserva 63 aciertos y añade cuatro, junto con nueve falsos positivos. En test conserva las 116 predicciones Severe y añade doce; su recall absoluto no está disponible.
 8. **Generalización.** Se propone una estrategia transferible como hipótesis de trabajo. No se afirma validación en otras instituciones. El test oficial orientó la selección de entregas.
 
 ## Cambios de esta revisión
@@ -27,4 +27,8 @@ La revisión del proyecto original confirmó que GitHub era anterior al camera-r
 
 ## Revisión técnica
 
-Las presentaciones contienen diez diapositivas por idioma, gráficos y tablas nativos, diagramas editables y notas del orador. Se verificaron estructura del paquete, datos de gráficos y geometría. La revisión visual usa imágenes renderizadas; no constituye una prueba dentro de PowerPoint. Los PDF se revisan renderizados a imagen. Los materiales y su documentación no incluyen relatos, identificadores de casos ni correos personales.
+Las presentaciones contienen diez diapositivas principales y dos de respaldo por idioma, gráficos y tablas nativos, diagramas editables y notas del orador. Se verificaron estructura del paquete, datos de gráficos y geometría. La revisión visual usa imágenes renderizadas; no constituye una prueba dentro de PowerPoint. Los PDF se revisan renderizados a imagen. Los materiales y su documentación no incluyen relatos, identificadores de casos ni correos personales.
+
+## Reconstrucción histórica del 22 de septiembre
+
+La [historia de selección del sistema final](../docs/final_selection.md) distingue búsqueda, reconstrucción y envío evaluado. La diapositiva 7 explica por qué se retuvo BETO para S2 y el ancla para S1; la 11 compara el sistema realmente enviado en desarrollo. El candidato intermedio del 5 de mayo permanece documentado, pero no se presenta como entrega final. El análisis de consenso pasa a la diapositiva 12: se realizó después del paper y no debe explicar retrospectivamente la selección del sistema.

@@ -32,7 +32,7 @@ La narrativa principal sigue el problema, las tres vías exploradas, las decisio
 
 ## Material para el evento
 
-La versión para enviar tiene diez diapositivas principales en inglés, una diapositiva final de respaldo para preguntas y un PDF visual de respaldo. Las versiones españolas y los guiones son para revisión y ensayo. El póster conserva el formato A0 vertical (841 x 1189 mm), las referencias enlazadas al repositorio público y el código QR.
+La versión para enviar tiene diez diapositivas principales en inglés, dos diapositivas finales de respaldo para preguntas y un PDF visual de respaldo. Las versiones españolas y los guiones son para revisión y ensayo. El póster conserva el formato A0 vertical (841 x 1189 mm), las referencias enlazadas al repositorio público y el código QR.
 
 El correo organizativo del 19 de septiembre pide enviar las diapositivas a más tardar el 21 de septiembre. La [guía oficial de montaje](https://sepln2026.org/guia-de-colocacion-de-posters/) pide llevar el póster impreso y no impone una plantilla. Esta carpeta no implica que el correo ya haya sido enviado.
 
@@ -41,3 +41,12 @@ El correo organizativo del 19 de septiembre pide enviar las diapositivas a más 
 La diapositiva 11 compara BETO base, BETO con aumentación Severe y el candidato intermedio `repro_diverse10_dw0.50_equal_ordmix` del 5 de mayo. Este incluye `augrep08` y su reporte documenta que la reconstrucción reprodujo el score de desarrollo. Sus resultados son macro-F1 0.580536, F1 Severe 0.473684 y recall Severe 0.409091. Se mantienen los diez minutos del discurso principal y se reserva la diapositiva adicional para preguntas.
 
 La explicación previa citó 41.56% de recall de un candidato anterior del 3 de mayo sin recoger el problema de reconstrucción documentado al final del mismo reporte. Esa omisión queda corregida: la nueva diapositiva utiliza el 40.91% del candidato posterior con reconstrucción verificada en el reporte. Ninguno de esos valores debe identificarse como el recall del sistema final. La comparación corresponde al ensamble completo y no a una ablación del modelo aumentado. Véase [la evidencia y el historial de la corrección](../docs/augmentation_ensemble.md).
+
+
+## Revisión histórica integral del 22 de septiembre
+
+La ampliación anterior queda como registro del proceso. La diapositiva 11 actual compara el sistema realmente enviado: ancla Top10, foldbag BETO aumentado + Electricidad y router final sobre los mismos 3,405 reportes de desarrollo. Sus recalls Severe son 40.91%, 40.26% y 43.51%. El router conserva 63 aciertos y añade cuatro, junto con nueve falsos positivos adicionales. Los valores se recalcularon desde las predicciones guardadas y coinciden con el JSON del paquete.
+
+La comparación directa de los ZIP confirma que el test final conserva las 116 predicciones Severe del ancla y añade doce. Por inclusión del conjunto predicho positivo, su recall no puede bajar respecto al ancla sobre el mismo gold y alineación; su valor absoluto sigue desconocido. Esta propiedad no garantiza precisión ni F1. El micro-F1 devel correcto del router es 0.58825257, frente a 0.588840 en un reporte narrativo anterior; no cambia el resultado oficial.
+
+La diapositiva 7 ahora explica la mejora externa de S2 y el resultado negativo de highpen en S1. El análisis posterior de consenso pasa a la diapositiva 12 de respaldo. El ensamble intermedio permanece documentado, pero ya no cierra la explicación del recall final. Fuentes y valores en [la reconstrucción de la selección final](../docs/final_selection.md).

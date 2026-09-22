@@ -1,0 +1,124 @@
+{
+  "evaluation": "S1 original development; router selected on development",
+  "n": 3405,
+  "systems": {
+    "base_pred": {
+      "macro_f1": 0.5588786159649086,
+      "micro_f1": 0.5820851688693098,
+      "severe": {
+        "precision": 0.5887850467289719,
+        "recall": 0.4090909090909091,
+        "f1": 0.4827586206896552,
+        "support": 154,
+        "tp": 63,
+        "predicted": 107
+      },
+      "confusion": [
+        [
+          434,
+          286,
+          19,
+          0
+        ],
+        [
+          213,
+          595,
+          372,
+          3
+        ],
+        [
+          68,
+          330,
+          890,
+          41
+        ],
+        [
+          5,
+          13,
+          73,
+          63
+        ]
+      ]
+    },
+    "candidate_pred": {
+      "macro_f1": 0.5645633048288119,
+      "micro_f1": 0.5906020558002937,
+      "severe": {
+        "precision": 0.5849056603773585,
+        "recall": 0.4025974025974026,
+        "f1": 0.47692307692307695,
+        "support": 154,
+        "tp": 62,
+        "predicted": 106
+      },
+      "confusion": [
+        [
+          476,
+          247,
+          16,
+          0
+        ],
+        [
+          231,
+          561,
+          387,
+          4
+        ],
+        [
+          76,
+          301,
+          912,
+          40
+        ],
+        [
+          5,
+          14,
+          73,
+          62
+        ]
+      ]
+    },
+    "final_pred": {
+      "macro_f1": 0.5668988893050375,
+      "micro_f1": 0.5882525697503671,
+      "severe": {
+        "precision": 0.5583333333333333,
+        "recall": 0.43506493506493504,
+        "f1": 0.48905109489051096,
+        "support": 154,
+        "tp": 67,
+        "predicted": 120
+      },
+      "confusion": [
+        [
+          476,
+          244,
+          19,
+          0
+        ],
+        [
+          230,
+          578,
+          371,
+          4
+        ],
+        [
+          76,
+          322,
+          882,
+          49
+        ],
+        [
+          5,
+          13,
+          69,
+          67
+        ]
+      ]
+    }
+  },
+  "new_severe_true": 4,
+  "new_severe_false": 9,
+  "source": "Archived final-package devel_verbose.csv, recomputed September 22, 2026",
+  "source_sha256": "6cb0515ee8f8cd453de542013b97afe82e6db783eeec1ae8c4975589f77d599c"
+}
