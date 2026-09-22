@@ -1,6 +1,6 @@
 # Guion de exposición
 
-10 diapositivas, 10 minutos. Los tiempos incluyen señalar los diagramas y hacer pausas. Ensayar antes del evento.
+10 diapositivas principales para 10 minutos y una diapositiva final de respaldo para preguntas.
 
 ## 1. Clasificación de reportes de violencia (0:00–0:30)
 
@@ -44,7 +44,7 @@ Respaldo para preguntas (no leer como parte del guion): Severe tenía 616 de 13,
 
 ## 6. La mejora incluye un intercambio de errores (5:05–6:15)
 
-La comparación usa los mismos 3,405 reportes de desarrollo. La gráfica muestra diferencias absolutas multiplicadas por cien: el macro-F1 sube 0.71 puntos y el F1 de Severe sube 1.57. A la vez, su recall baja 2.60 puntos. Por eso evaluamos la receta con varias métricas: mejora el F1, pero recupera una menor proporción de los casos Severe. Los pesos de clase se recalcularon con los datos aumentados. Esta comparación describe el efecto observado de la receta completa.
+La comparación usa los mismos 3,405 reportes de desarrollo. La gráfica muestra diferencias absolutas multiplicadas por cien: el macro-F1 sube 0.71 puntos y el F1 de Severe sube 1.57. A la vez, su recall baja 2.60 puntos. Por eso evaluamos la receta con varias métricas: mejora el F1, pero recupera una menor proporción de los casos Severe. Los pesos de clase se recalcularon con los datos aumentados. Esta comparación describe el efecto observado de la receta completa. La diapositiva de respaldo muestra qué ocurrió al integrar esta variante en un ensamble posterior.
 
 Fuente: https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/results/evidence.json; https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/docs/results.md. Delta = 100*(augmented - baseline).
 
@@ -81,3 +81,11 @@ La propuesta que puede generalizarse es una estrategia comprobable: comparar fam
 Fuente: https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/docs/method.md, limitations and future validation.
 
 Respaldo para preguntas (no leer como parte del guion): La propuesta que puede generalizarse es una estrategia comprobable: comparar familias con protocolos comunes, adaptar salidas y pérdidas al significado de las etiquetas, intervenir sobre clases escasas y medir todos los errores relevantes. Una vez elegidas las recetas, limitar cambios alrededor de una referencia permite controlar cuántas decisiones se modifican. Para poner a prueba esa estrategia fuera del concurso, proponemos auditar las variantes sintéticas, controlar balance y pesos, repetir semillas y evaluar por institución y nivel de consenso. Estas son las siguientes pruebas; todavía no demostramos generalización entre instituciones. Gracias.
+
+## 11. El modelo aumentado dentro del ensamble (Respaldo / Q&A: 45–60 s)
+
+Esta comparación responde qué ocurrió al combinar el modelo aumentado con otras fuentes. Sobre los mismos 3,405 reportes originales de desarrollo, el recall de Severe fue 39.61% para BETO base y 37.01% para BETO con aumentación. Un ensamble posterior de diez fuentes, que incluía esa variante, alcanzó 40.91% de recall, 0.4737 de F1 Severe y 0.5805 de macro-F1. En los 154 reportes Severe, esto corresponde a 61 aciertos para la base, 57 para el modelo aumentado y 63 para el ensamble. Por tanto, la pérdida de recall del componente individual no se mantuvo en este ensamble. Es un resultado intermedio de desarrollo del 5 de mayo, separado del resultado oficial final.
+
+Fuente: https://github.com/mariron42/clasificador_violencia/blob/main/docs/augmentation_ensemble.md; https://github.com/mariron42/clasificador_violencia/blob/main/results/evidence.json. Archived source: reporte_s1_reproducible_sources_search_20260505.md.
+
+Respaldo para preguntas (no leer como parte del guion): Candidato repro_diverse10_dw0.50_equal_ordmix: diez fuentes con peso igual y umbrales acumulativos [0.50, 0.50, 0.50]. Incluye augrep08, otras variantes de aumentación BETO, Electricidad, XLM-R, mmBERT y mean_top3, que ya es una fuente compuesta. El reporte documenta reproducción del score al materializar. El candidato se seleccionó sobre desarrollo: esta comparación no es una ablación ni aísla la aportación de augrep08. Corrección respecto de la explicación previa: el recall 41.56% correspondía a un candidato de búsqueda anterior cuya reconstrucción no reprodujo el score. Aquí usamos 40.91% del candidato posterior verificado. No se afirma que sea el recall del sistema final.

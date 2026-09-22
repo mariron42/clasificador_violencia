@@ -1,6 +1,6 @@
 # Speaker script
 
-10 slides, 10 minutes. Timings include pointing at diagrams and pauses. Rehearse before the event.
+10 main slides for 10 minutes and one final backup slide for questions.
 
 ## 1. Violence report classification (0:00–0:30)
 
@@ -44,7 +44,7 @@ Technical backup for questions (not part of the spoken script): Severe had 616 o
 
 ## 6. The improvement includes an error trade-off (5:05–6:15)
 
-Both recipes use the same 3,405 development reports. The chart shows absolute differences multiplied by one hundred: macro-F1 rises by 0.71 points and Severe F1 by 1.57. Severe recall falls by 2.60 points. This is why we evaluate several metrics: the recipe improves F1 while recovering a smaller proportion of Severe cases. Class weights were recomputed on augmented training data. The comparison describes the observed result of the complete recipe.
+Both recipes use the same 3,405 development reports. The chart shows absolute differences multiplied by one hundred: macro-F1 rises by 0.71 points and Severe F1 by 1.57. Severe recall falls by 2.60 points. This is why we evaluate several metrics: the recipe improves F1 while recovering a smaller proportion of Severe cases. Class weights were recomputed on augmented training data. The comparison describes the observed result of the complete recipe. The backup slide shows what happened when this variant joined a later ensemble.
 
 Source: https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/results/evidence.json; https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/docs/results.md. Delta = 100*(augmented - baseline).
 
@@ -81,3 +81,11 @@ What may generalize is a testable strategy: compare model families under common 
 Source: https://github.com/mariron42/clasificador_violencia/blob/92aa2ad0a8568dc729da674bcc81040d01f64fa4/docs/method.md, limitations and future validation.
 
 Technical backup for questions (not part of the spoken script): What may generalize is a testable strategy: compare model families under common protocols, align outputs and losses with label meaning, target scarce classes and measure all relevant errors. After selecting recipes, restricting changes around a reference controls how many decisions move. To test the strategy outside the competition, we propose auditing synthetic variants, controlling balance and weights, repeating seeds and evaluating by institution and annotation consensus. These are future tests. Cross-institution generalization has not yet been demonstrated. Thank you.
+
+## 11. The augmented model in an ensemble (Respaldo / Q&A: 45–60 s)
+
+This comparison shows what happened when we combined the augmented model with other sources. On the same 3,405 original development reports, Severe recall was 39.61% for baseline BETO and 37.01% for augmented BETO. A later ensemble of ten sources, including that variant, reached 40.91% recall, 0.4737 Severe F1 and 0.5805 macro-F1. Among 154 Severe reports, these recalls correspond to 61 correct predictions for the baseline, 57 for augmented BETO and 63 for the ensemble. The individual component recall loss therefore did not persist in this ensemble. This is an intermediate development result from May 5, separate from the final official result.
+
+Source: https://github.com/mariron42/clasificador_violencia/blob/main/docs/augmentation_ensemble.md; https://github.com/mariron42/clasificador_violencia/blob/main/results/evidence.json. Archived source: reporte_s1_reproducible_sources_search_20260505.md.
+
+Technical backup for questions (not part of the spoken script): Candidate repro_diverse10_dw0.50_equal_ordmix uses ten equally weighted sources and cumulative thresholds [0.50, 0.50, 0.50]. It includes augrep08, other BETO augmentation variants, Electricidad, XLM-R, mmBERT and mean_top3, which is already a combined source. The archived report documents reproduction of the search score during materialization. Selection used development data: this is not an ablation and does not isolate the contribution of augrep08. Correction to the earlier explanation: 41.56% recall referred to an earlier search candidate whose reconstruction did not reproduce its score. This slide uses the later verified candidate at 40.91%. This is not a claim about final-system recall.

@@ -43,5 +43,19 @@
     "anchor_severity_macro_f1": 0.6067770721254157,
     "changed": 290,
     "n": 4219
+  },
+  "intermediate_augmentation_ensemble": {
+    "date": "2026-05-05",
+    "candidate": "repro_diverse10_dw0.50_equal_ordmix",
+    "evaluation": "Original S1 development; selected on development; not final official test",
+    "n": 3405,
+    "severe_n": 154,
+    "source_count": 10,
+    "contains": "augrep08",
+    "macro_f1": 0.58053633915804,
+    "severe_f1": 0.47368421052631576,
+    "severe_recall": 0.4090909090909091,
+    "reconstruction_status": "Archived report confirms materialized development score reproduced search score",
+    "source_report": "reporte_s1_reproducible_sources_search_20260505.md"
   }
 }

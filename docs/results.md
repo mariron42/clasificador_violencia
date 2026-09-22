@@ -38,6 +38,10 @@ Joint exact match requires both severity and the complete type set to be correct
 
 Training: 616 Severe / 13,630 became 1,132 / 14,146 after 516 report-template variants. Development was not augmented. The displayed chart deltas are calculated from the six-decimal archived summary. No confidence intervals are claimed. Source: augrep08 metrics summary and Mild report-style follow-up, 2026-05-03.
 
+## Intermediate ensemble with augmented BETO
+
+An intermediate development ensemble including augmented BETO reached 0.580536 macro-F1, 0.473684 Severe F1 and 0.409091 Severe recall. See [the May 5 ensemble comparison](augmentation_ensemble.md) for its source membership, reconstruction status and distinction from final official test results.
+
 ## Official test
 
 | Measure | Previous anchor | Final |
